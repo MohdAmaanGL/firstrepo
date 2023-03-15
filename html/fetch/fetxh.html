@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function ConsumableService(){
+fetch("https://jsonplaceholder.typicode.com/users/1")
+.then(response=>response.json())
+.catch(error => alert('something bad happened'))
+.then(json => console.log(json))
+
+} 
+ConsumableService();
+</script>
+
+</body>
+</html>

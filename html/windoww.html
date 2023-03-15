@@ -1,0 +1,43 @@
+<HTML>
+    <HEAD>
+    <TITLE>
+    The javascript more Example
+    </TITLE>
+    <script type="text/javascript" >
+        function popuponclick() {
+            my_window = window.open("","mywindow", "status=2,width=350,height=150");
+            my_window.document.write('<h1>The Popup Window</h1>');
+            }
+            
+            function closepopup()
+            {
+            
+            if(false == my_window.closed)
+            {
+            my_window.close();        
+            } 
+            else
+            {
+            alert("Window already closed!"); 
+            
+            } 
+            
+            }   
+                
+          
+           
+    </script>  
+    
+    </HEAD>
+    <BODY>
+    <p>
+    <a href="javascript:popuponclick()">open Popup Window</a> 
+    </p>
+    <p>
+    <a href="javascript:closepopup()">Close Popup Window</a> 
+    </p>
+     
+    </BODY>
+    
+    </HTML>
+    

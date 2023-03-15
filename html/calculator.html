@@ -1,0 +1,59 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function s(data){
+            let num1=parseInt(document.getElementById("a").value);
+            let num2= parseInt(document.getElementById("b").value);
+            
+          if(data=="+"){
+            document.getElementById("c").innerHTML=num1+num2;
+        }
+           else if(data=="-"){
+                document.getElementById("c").innerHTML=num1-num2;  
+            }
+           else if(data=="*"){
+            document.getElementById("c").innerHTML=num1*num2;  
+           }
+           else {
+            document.getElementById("c").innerHTML=num1/num2;
+           }
+          }
+        
+    </script>
+</head>
+
+<body>
+    <form action="#" style="text-align: center;margin: 0 auto;">
+    1.digit1<br>
+    <input id="a" type="number" />
+    <br>
+    2.digit2<br>
+    <input id="b" type="number"/>
+    <br>
+    <div style=" width:200px;background-color:blueviolet; position:absolute;right:43% ">
+    <button onclick='s("+")'>
+        +
+    </button >
+    <button onclick='s("-")'>
+        -
+    </button >
+    <button onclick='s("*")'>
+        *
+    </button>
+    <button onclick='s("/")'>
+        /
+    </button>
+    </div>
+   <br>
+    <div  id="c" style="height: 150px;width:200px;background-color: aqua;border:solid 10px;  position:absolute;right:42%;">
+     </div>
+    </form>
+</body>
+
+</html

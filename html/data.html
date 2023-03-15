@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function showDataa(){
+
+            const heading =document.createElement('h1')
+            heading.innerHTML="Your Details";
+            document.body.append(heading);
+
+            const a= localStorage.getItem("firstName");
+            const z =document.createElement('h2')
+            z.innerHTML="First Name : "+a;
+            document.body.append(z);
+
+
+            const b= localStorage.getItem("lastName");
+            const z1 =document.createElement('h2')
+            z1.innerHTML="Last Name : "+b;
+            document.body.append(z1);
+
+            const c= localStorage.getItem("mail");
+            const z2 =document.createElement('h3')
+            z2.innerHTML="Email : "+c;
+            document.body.append(z2);
+
+            const d= localStorage.getItem("gender");
+            const z3 =document.createElement('h3')
+            z3.innerHTML="Gender : "+d;
+            document.body.append(z3);
+
+            const e= localStorage.getItem("text");
+            const z4 =document.createElement('h4')
+            z4.innerHTML="DOB : "+e;
+            document.body.append(z4);
+
+            const f= localStorage.getItem("address");
+            const z5 =document.createElement('h4')
+            z5.innerHTML="Address : "+f;
+            document.body.append(z5);
+
+            h = localStorage.getItem("state");
+            const z7 =document.createElement('h5')
+            z7.innerHTML="State : "+h;
+            document.body.append(z7);
+
+            g = localStorage.getItem("hobbies");
+            const z6 =document.createElement('h5')
+            z6.innerHTML="Hobbies : "+g;
+            document.body.append(z6);
+        })()
+    </script>
+</body>
+</html>

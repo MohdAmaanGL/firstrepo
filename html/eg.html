@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="headid">hii</h1>
+    <button onclick="hel()">submit</button>
+    <script>
+        // const heading = document.createElement('h1');
+        // heading.innerHTML="hello";
+        // heading.setAttribute('id','headid')
+
+        function hel(){
+            document.getElementById('headid').innerHTML=" ";
+
+        }
+        // const s =(a,b)=>a+b;
+        // document.write(s(1,2));
+        // const a = [1,9];
+        // document.write(s(...a));
+
+        // const more = [1,a];
+        // document.write(more);
+
+        // const concatt = [...a,...more]
+
+        function restt(dis,...prices){
+            // const t = prices.reduce=((a,b)=>a+b);
+            const t = funcc(...prices);
+            return t-dis;
+        }
+        function funcc(...x){
+            return x.reduce=((a,b)=>a+b);
+        }
+        document.write(restt(10,20,30,40));
+    </script>
+    
+</body>
+</html>
+
+
+
+

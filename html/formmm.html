@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var checkname=/^[A-Za-z0-9 ]{3,20}$/;
+        var checksection=/^[A-Za-z0-9 ]{3,20}$/;
+
+        function func(form){
+            var name=form.name.value;
+            var section=form.section.value;
+            var errors=[];
+            if(!checkname.test(name)) 
+                {errors[errors.length]="correct name";}
+                if(!checksection.test(section)){
+                errors[errors.length]="correct section";}
+                 
+                if (errors.length > 0) {
+        
+                    
+        
+        reportErrors(errors);
+    
+        return false;
+       }
+        return true;
+            }
+
+            function reportErrors(errors){
+                var msg = "Please Enter Valide Data...\n";
+         for (var i = 0; i<errors.length; i++) {
+         var numError = i + 1;
+          msg += "\n" + numError + ". " + errors[i];
+        }
+         alert(msg);
+        }
+            
+
+        
+    </script>
+</head>
+<body>
+    <form method="post" action="#" onsubmit="return func(this)" name="form">
+    name<input type="text" name="name"/>
+    <br>
+
+    section<input type="text" name="section"/>
+    <br>
+    <!-- <button type="submit" value="submit">click</button> -->
+    <input type="submit" value="submit">
+    </form>
+</body>
+</html>

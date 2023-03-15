@@ -1,0 +1,15 @@
+body, html {
+    height: 96%;
+}
+
+.bg{
+    background-image: url(back.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+

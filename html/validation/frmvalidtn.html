@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" >
+        var ck_name = /^[A-Za-z]{4,20}$/;
+        var ck_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var ck_num = /^[7-9][0-9]{9}$/;
+        var ck_password = /^[A-za-z0-9!@#$%^&*]{8,16}$/;
+
+
+        function validate(form){
+            var name = form.name.value;
+            var email = form.email.value;
+            var password = form.password.value;
+            var number = form.number.value;
+            var errors=[];
+
+            if(!ck_name.test(name)){
+                errors[errors.length]="Name should be valid";
+            }
+            if(!ck_email.test(email)){
+                errors[errors.length]="Mail should be valid";
+            }
+            if(!ck_password.test(password)){
+                errors[errors.length]="Pass should be valid";
+            }
+            if(!ck_num.test(number)){
+                errors[errors.length]="Num should be = to 10";
+            }
+
+            if (errors.length > 0) {
+        
+                report(errors);
+                return false;
+            }
+            return true;
+        }
+
+            function report(errors){
+                var msg = "Please Enter Valide Data...\n";
+                for(let i=0;i<errors.length;i++){
+                    numError=i+1;
+                    msg += "\n" + numError + ". " + errors[i];
+                }
+                alert(msg)
+            }
+
+    </script>
+</head>
+<body>
+    <form method="post" action="#" onSubmit="return validate(this);" name="form">
+        Name : <input type="text" name="name"> <br>
+        Email : <input type="email" name="email"> <br>
+        Password : <input type="password" name="password"> <br>
+        Age : <input type="number" min="0" max="100"> <br>
+        Mobile : <input type="number" name="number"> <br>
+        Gender : <select type="radio" name="" id="">
+            <option hidden>Choose here</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select> <br>
+        <!-- <button type="submit" value="submit">Submit</button> -->
+        <input id="Submit1" type="submit" value="submit" />
+    </form>
+</body>
+</html>

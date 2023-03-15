@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <head>
+        <title>JavaScript Demo</title> 
+        <script type="text/javascript">
+            function AddNum() {
+        
+                var t1var = document.getElementById("text1").value;
+                var t2var = document.getElementById("text2").value;
+                var res = parseInt(t1var) + parseInt(t2var);
+                // document.getElementById("bresult").innerHTML = res;             
+                const a =document.createElement('h1')
+                a.innerHTML = "The value is " + res;
+                document.body.append(a);
+            } 
+            
+        </script>  
+        </head> 
+        <body>
+           <p>Enter First Number</p>
+            <input type="text" id="text1" />
+            <br />
+            <p>Enter Second Number</p>
+           <input type="text" id="text2" />
+             <br />
+             <input type="button" onclick="AddNum()" value="Click Me" />    
+             <!-- <p>The Result is : <b id="bresult">result</b></p>         -->
+        </body> 
+    
+</html>
